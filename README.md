@@ -1,11 +1,8 @@
 Both Algorithms use similar Neural Network with 4 input nodes, 1 hidden layer of 5 nodes and 1 output layer of 1 node.
 
 With "DISCARD_TOO_GOOD" parameter we remove all the population member who have very high strength than the others.
-
 With "TRAIN" parameter you can change the game mode from training to test or test to training.
-
 With "SPEED" parameter speed of the game can be changed.
-
 Population members are array of real numbers.
 
 
@@ -16,7 +13,7 @@ Population members are array of real numbers.
 	POPULATION_MAX = initial_population_size - 2
 	MAX_GENERATION = 100
 
-# Description:
+## Description:
 
 We start with small population of "initial_population_size" i.e, generate "initial_population_size" set of individuals(weights of the neural network). Run game using these weights and check how many times paddle of AI player is able to hit the ball (this score is pseudo score) which is their strength, now sort the sets of population in descending order of their strength and pick top "PICK_FIT_MAX" (the currently selected population). 
 
