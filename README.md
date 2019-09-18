@@ -23,7 +23,7 @@ and add them to current population
 	Again the tournament is performed and same process is repeated for "MAX_GENERATIONS"
 
 
-###### Genetic Algorithm:  
+# Genetic Algorithm:  
 ## Control Parameters:
 	initial_population_size = 10
 	PICK_FIT_MAX = initial_population_size
@@ -32,3 +32,5 @@ and add them to current population
 	CRX2 = 0.3
 	CRX = 0.6
 	MUTATE = 0.1
+## Description:
+
