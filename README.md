@@ -1,9 +1,13 @@
 Both Algorithms use similar Neural Network with 4 input nodes, 1 hidden layer of 5 nodes and 1 output layer of 1 node.
 
 With "DISCARD_TOO_GOOD" parameter we remove all the population member who have very high strength than the others.
+
 With "TRAIN" parameter you can change the game mode from training to test or test to training.
+
 With "SPEED" parameter speed of the game can be changed.
+
 Population members are array of real numbers.
+
 
 # FireFly Algorithm:
 ## Control Parameters: 
