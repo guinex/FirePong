@@ -12,8 +12,9 @@ Population members are array of real numbers.
 	POPULATION_MAX = initial_population_size - 2
 	MAX_GENERATION = 100
 
-### Description:
-	We start with small population of "initial_population_size" i.e, generate "initial_population_size" set of individuals(weights of the neural network). Run game using these weights and check how many times paddle of AI player is able to hit the ball (this score is pseudo score) which is their strength, now sort the sets of population in descending order of their strength and pick top "PICK_FIT_MAX" (the currently selected population). 
+# Description:
+
+We start with small population of "initial_population_size" i.e, generate "initial_population_size" set of individuals(weights of the neural network). Run game using these weights and check how many times paddle of AI player is able to hit the ball (this score is pseudo score) which is their strength, now sort the sets of population in descending order of their strength and pick top "PICK_FIT_MAX" (the currently selected population). 
 
 	Pick any 2 randomly from this population (one as parent and one that moves towards it) and change values at indices selected at random. To change we either add or subtract a proportion of parent individual value at that index.
 	Now as this population is as similar as the pervious population(small variation), generate new population members(set of weights)
