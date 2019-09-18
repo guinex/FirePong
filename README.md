@@ -21,13 +21,11 @@ and add them to current population
 
 
 ###### Genetic Algorithm:  
-	## Control Parameters 
-		initial_population_size = 10
-		PICK_FIT_MAX = initial_population_size //3
-		POPULATION_MAX = initial_population_size - 2
-		MAX_GENERATION = 50
-		final_best_individual = None
-		previous_score = 0 # will be used for early stopping
-		CRX2 = 0.3
-		CRX = 0.6
-		MUTATE = 0.1
+## Control Parameters 
+	initial_population_size = 10
+	PICK_FIT_MAX = initial_population_size
+	POPULATION_MAX = initial_population_size - 2
+	MAX_GENERATION = 50
+	CRX2 = 0.3
+	CRX = 0.6
+	MUTATE = 0.1
