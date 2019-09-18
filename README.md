@@ -35,4 +35,4 @@ Again the tournament is performed and same process is repeated for "MAX_GENERATI
 	MUTATE = 0.1
 ## Description:
 
-View Code <a href="https://github.com/guinex/FirePong/blob/master">Here. </a>
+View Code <a href="https://github.com/guinex/FirePong">Here. </a>
