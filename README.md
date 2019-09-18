@@ -6,7 +6,7 @@ With "SPEED" parameter speed of the game can be changed.
 Population members are array of real numbers.
 
 # FireFly Algorithm:
-### Control Parameters: 
+## Control Parameters: 
 	initial_population_size = 5
 	PICK_FIT_MAX = 3
 	POPULATION_MAX = initial_population_size - 2
@@ -22,7 +22,7 @@ and add them to current population
 
 
 ###### Genetic Algorithm:  
-## Control Parameters 
+## Control Parameters:
 	initial_population_size = 10
 	PICK_FIT_MAX = initial_population_size
 	POPULATION_MAX = initial_population_size - 2
