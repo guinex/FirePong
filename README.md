@@ -53,5 +53,10 @@ Model has been trained and weights have been saved in weights3.pkl.
 This file is loaded while testing model as well.
 Try playing with control parameters and generate new files to check the difference.
 
+## Want to have some Fun?
+
+Run AI trained using genetics algorithm against the one trained using FireFly Algorithm.
+(Load pickle file for player 1 as well).
+
 
 View Code <a href="https://github.com/guinex/FirePong">Here. </a>
