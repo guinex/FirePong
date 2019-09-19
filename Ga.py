@@ -23,9 +23,9 @@ W1_shape = (4, 4)
 W2_shape = (4, 5)
 W3_shape = (1, 5)
 DISCARD_TOO_GOOD=True
-initial_population_size = 10
-PICK_FIT_MAX = initial_population_size //3
-POPULATION_MAX = initial_population_size - 2
+INIT_POPULATION_SIZE = 10
+PICK_FIT_MAX = INIT_POPULATION_SIZE //3
+POPULATION_MAX = INIT_POPULATION_SIZE - 2
 MAX_GENERATION = 50
 TRAIN = False
 final_best_individual = None
@@ -37,7 +37,7 @@ MUTATE = 0.1
 def initialize_population():
     population = []
     #convention: each chromosome will have dimensions 1x33
-    for i in range(initial_population_size):
+    for i in range(INIT_POPULATION_SIZE):
         W1 = np.random.randn(W1_shape[0], W1_shape[1])
         W2 = np.random.randn(W2_shape[0], W2_shape[1])
         W3 = np.random.randn(W3_shape[0], W3_shape[1])
@@ -161,28 +161,28 @@ def main_function(dt, pong):
                 sorted_fitnesses.pop(0)
         new_population.append(sorted_pop[0])
         new_population.append(sorted_pop[1])
-        while len(new_population) < initial_population_size:
+        while len(new_population) < INIT_POPULATION_SIZE:
                 # select any from the top 6 of the population and randomly breed and mutate them
                 # First crossover:
                 idx1 = selectindex(True)
                 idx2 = selectindex(False) # two parents
                 if idx1 != idx2:
                     children, crossovered = crossover([current_generation[idx1],population[idx2]], prob = crossover_prob)
-                    if crossovered and len(new_population) < initial_population_size-1:
+                    if crossovered and len(new_population) < INIT_POPULATION_SIZE-1:
                         new_population.extend(children)
                 # Mutation:
                 idx1 = selectindex(True)
                 child, mutated = mutate(current_generation[idx1], prob = mutation_prob)
-                if mutated and len(new_population) < initial_population_size:
+                if mutated and len(new_population) < INIT_POPULATION_SIZE:
                     new_population.append(child)
 #                # Crossover 2:
                 idx1 = selectindex(True);
                 idx2 = selectindex(False)
                 if idx1 != idx2:
                     children, crossovered = crossover2([current_generation[idx1],population[idx2]], prob = crossover2_prob)
-                    if crossovered and len(new_population) < initial_population_size-1:
+                    if crossovered and len(new_population) < INIT_POPULATION_SIZE-1:
                         new_population.extend(children)
-                if random() < 0.35 and len(new_population) < initial_population_size:
+                if random() < 0.35 and len(new_population) < INIT_POPULATION_SIZE:
                     new_population.append(generate_random_chromosome())
         population = list(np.copy(new_population))
     sorted_pop, sorted_losses = tournament(population, pong)

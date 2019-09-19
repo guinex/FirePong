@@ -31,9 +31,9 @@ W1_shape = (4, 4)
 W2_shape = (4, 5)
 W3_shape = (1, 5)
 DISCARD_TOO_GOOD=True
-initial_population_size = 5
+INIT_POPULATION_SIZE = 5
 PICK_FIT_MAX = 3
-POPULATION_MAX = initial_population_size - 2
+POPULATION_MAX = INIT_POPULATION_SIZE - 2
 MAX_GENERATION = 100
 TRAIN = False
 final_best_individual = None
@@ -43,7 +43,7 @@ MOVE_BY_PACE = 0.3
 def initialize_population():
     population = []
     #convention: each chromosome will have dimensions 1x33
-    for i in range(initial_population_size):
+    for i in range(INIT_POPULATION_SIZE):
         W1 = np.random.randn(W1_shape[0], W1_shape[1])
         W2 = np.random.randn(W2_shape[0], W2_shape[1])
         W3 = np.random.randn(W3_shape[0], W3_shape[1])
@@ -146,15 +146,15 @@ def main_function(dt, pong):
         new_population.append(sorted_pop[0])
         new_population.append(sorted_pop[1])
         new_population.append(sorted_pop[2])
-        while len(new_population) < initial_population_size:
+        while len(new_population) < INIT_POPULATION_SIZE:
                 idx1 = selectindex(True)
                 idx2 = selectindex(False)
 
                 child, moved = moveTowardsParent(current_generation[idx2],current_generation[idx1], prob = moving_prob)
-                if moved and len(new_population) < initial_population_size:
+                if moved and len(new_population) < INIT_POPULATION_SIZE:
                     new_population.append(child)
 
-                if random() < 0.4 and len(new_population) < initial_population_size:
+                if random() < 0.4 and len(new_population) < INIT_POPULATION_SIZE:
                     new_population.append(generate_random_chromosome())
         population = list(np.copy(new_population))
     sorted_pop, sorted_losses = tournament(population, pong)
