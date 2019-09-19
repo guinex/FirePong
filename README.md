@@ -17,7 +17,7 @@ Population members are array of real numbers.
 
 We start with small population of "INIT_POPULATION_SIZE" i.e, generate "INIT_POPULATION_SIZE" set of individuals(weights of the neural network). Run game using these weights and check how many times paddle of AI player is able to hit the ball (this score is pseudo score) which is their strength, now sort the sets of population in descending order of their strength and pick top "PICK_FIT_MAX" (the currently selected population). 
 
-Pick 2 individual from this population (one as parent with higher strenght and one with lower strength that moves towards the other) and change values at indices selected at random. To change we either add or subtract a proportion of parent individual value at that random index.
+Pick 2 individual from this population (one as parent with higher strenght and one with lower strength that moves towards the other) and change values of second individual at indices selected at random. To change we either add or subtract a proportion of parent individual's value from the other individual at that random index.
 Now as this population is as similar as the pervious population(small variation), generate new population members(set of weights)
 and add them to current population
 
