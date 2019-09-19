@@ -10,7 +10,7 @@ Population members are array of real numbers.
 ## Control Parameters: 
 	INIT_POPULATION_SIZE = 5
 	PICK_FIT_MAX = 3
-	POPULATION_MAX = initial_population_size - 2
+	POPULATION_MAX = INIT_POPULATION_SIZE - 2
 	MAX_GENERATION = 100
 
 ## Description:
@@ -32,8 +32,8 @@ Try playing with control parameters and generate new files to check the differen
 # Genetic Algorithm:  
 ## Control Parameters:
 	INIT_POPULATION_SIZE = 10
-	PICK_FIT_MAX = initial_population_size
-	POPULATION_MAX = initial_population_size - 2
+	PICK_FIT_MAX = INIT_POPULATION_SIZE
+	POPULATION_MAX = INIT_POPULATION_SIZE - 2
 	MAX_GENERATION = 50
 	CRX2 = 0.3
 	CRX = 0.6
