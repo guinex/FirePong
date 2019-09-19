@@ -8,25 +8,30 @@ Population members are array of real numbers.
 
 # FireFly Algorithm:
 ## Control Parameters: 
-	initial_population_size = 5
+	INIT_POPULATION_SIZE = 5
 	PICK_FIT_MAX = 3
 	POPULATION_MAX = initial_population_size - 2
 	MAX_GENERATION = 100
 
 ## Description:
 
-We start with small population of "initial_population_size" i.e, generate "initial_population_size" set of individuals(weights of the neural network). Run game using these weights and check how many times paddle of AI player is able to hit the ball (this score is pseudo score) which is their strength, now sort the sets of population in descending order of their strength and pick top "PICK_FIT_MAX" (the currently selected population). 
+We start with small population of "INIT_POPULATION_SIZE" i.e, generate "INIT_POPULATION_SIZE" set of individuals(weights of the neural network). Run game using these weights and check how many times paddle of AI player is able to hit the ball (this score is pseudo score) which is their strength, now sort the sets of population in descending order of their strength and pick top "PICK_FIT_MAX" (the currently selected population). 
 
-Pick any 2 randomly from this population (one as parent and one that moves towards it) and change values at indices selected at random. To change we either add or subtract a proportion of parent individual value at that index.
+Pick 2 individual from this population (one as parent with higher strenght and one with lower strength that moves towards the other) and change values at indices selected at random. To change we either add or subtract a proportion of parent individual value at that random index.
 Now as this population is as similar as the pervious population(small variation), generate new population members(set of weights)
 and add them to current population
 
 Again the tournament is performed and same process is repeated for "MAX_GENERATIONS"
 
+##Testing and Training
+
+Model has been trained and weights have been saved in weightsfirefly.pkl.
+This file is loaded while testing model as well.
+Try playing with control parameters and generate new files to check the difference.
 
 # Genetic Algorithm:  
 ## Control Parameters:
-	initial_population_size = 10
+	INIT_POPULATION_SIZE = 10
 	PICK_FIT_MAX = initial_population_size
 	POPULATION_MAX = initial_population_size - 2
 	MAX_GENERATION = 50
@@ -34,5 +39,18 @@ Again the tournament is performed and same process is repeated for "MAX_GENERATI
 	CRX = 0.6
 	MUTATE = 0.1
 ## Description:
+
+As before initial population is generated i.e set of weights of the neural network. Tournament strategy is same as before too.
+
+Instead of randomly picking one with highest strenght as parent and moving the other towards it, we perform crossovers (of 2 types: singal point and multi-point) with probability "CRX" and "CRX2" and then we perform mutations with probability "MUTATE". Now new population members are introduced and are added to current population.
+
+Again the tournament is performed and same process is repeated for "MAX_GENERATIONS"
+
+##Testing and Training
+
+Model has been trained and weights have been saved in weights3.pkl.
+This file is loaded while testing model as well.
+Try playing with control parameters and generate new files to check the difference.
+
 
 View Code <a href="https://github.com/guinex/FirePong">Here. </a>
