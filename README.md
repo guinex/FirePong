@@ -23,7 +23,7 @@ and add them to current population
 
 Again the tournament is performed and same process is repeated for "MAX_GENERATIONS"
 
-##Testing and Training
+## Testing and Training:
 
 Model has been trained and weights have been saved in weightsfirefly.pkl.
 This file is loaded while testing model as well.
@@ -38,6 +38,7 @@ Try playing with control parameters and generate new files to check the differen
 	CRX2 = 0.3
 	CRX = 0.6
 	MUTATE = 0.1
+
 ## Description:
 
 As before initial population is generated i.e set of weights of the neural network. Tournament strategy is same as before too.
@@ -46,7 +47,7 @@ Instead of randomly picking one with highest strenght as parent and moving the o
 
 Again the tournament is performed and same process is repeated for "MAX_GENERATIONS"
 
-##Testing and Training
+## Testing and Training:
 
 Model has been trained and weights have been saved in weights3.pkl.
 This file is loaded while testing model as well.
